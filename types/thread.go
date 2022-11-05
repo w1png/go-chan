@@ -1,6 +1,6 @@
 package types
 
-type Post struct {
+type Thread struct {
 	No            int    `json:"no"`
 	Resto         int    `json:"resto"`
 	Sticky        int    `json:"sticky"`
@@ -42,6 +42,7 @@ type Post struct {
 	ArchivedOn    int    `json:"archived_on"`
 }
 
-type Thread struct {
-	Posts []Post `json:"posts"`
+type Page struct {
+	Page    int      `json:"page"`
+	Threads []Thread `json:"threads"`
 }
